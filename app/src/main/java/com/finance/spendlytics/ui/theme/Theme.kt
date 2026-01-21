@@ -1,4 +1,4 @@
-package com.example.spendlytics.ui.theme
+package com.finance.spendlytics.ui.theme
 
 import android.app.Activity
 import androidx.compose.material3.MaterialTheme

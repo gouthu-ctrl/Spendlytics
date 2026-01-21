@@ -1,4 +1,4 @@
-package com.example.spendlytics.ui.theme
+package com.finance.spendlytics.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

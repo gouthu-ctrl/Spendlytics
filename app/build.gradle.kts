@@ -1,18 +1,19 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.example.spendlytics"
-    compileSdk = 34
+    namespace = "com.finance.spendlytics"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.spendlytics"
+        applicationId = "com.finance.spendlytics"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        targetSdk = 35
+        versionCode = 4
+        versionName = "1.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -61,6 +62,18 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.navigation:navigation-compose:2.7.5")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    implementation("androidx.biometric:biometric:1.2.0-alpha05")
+
+    // Firebase - Import the Bill of Materials (BOM)
+    implementation(platform("com.google.firebase:firebase-bom:32.7.4"))
+    // Firebase - Cloud Firestore
+    implementation("com.google.firebase:firebase-firestore-ktx")
+    // Firebase - Authentication
+    implementation("com.google.firebase:firebase-auth-ktx")
+    
+    // Google Sign-In
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

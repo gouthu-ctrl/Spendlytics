@@ -1,4 +1,4 @@
-package com.example.spendlytics
+package com.finance.spendlytics
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -7,10 +7,10 @@ import androidx.fragment.app.FragmentActivity
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.spendlytics.ui.screens.auth.AuthScreen
-import com.example.spendlytics.ui.screens.overview.OverviewScreen
-import com.example.spendlytics.ui.screens.splash.SplashScreen
-import com.example.spendlytics.ui.theme.SpendlyticsTheme
+import com.finance.spendlytics.ui.screens.LandingScreen
+import com.finance.spendlytics.ui.screens.auth.AuthScreen
+import com.finance.spendlytics.ui.screens.splash.SplashScreen
+import com.finance.spendlytics.ui.theme.SpendlyticsTheme
 
 class MainActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,8 +34,8 @@ fun SpendlyticsApp() {
         composable("auth") {
             AuthScreen(navController = navController)
         }
-        composable("overview") {
-            OverviewScreen()
+        composable("landing") {
+            LandingScreen()
         }
     }
 }
